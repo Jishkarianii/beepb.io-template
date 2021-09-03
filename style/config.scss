@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$main-text-color: #FFFFFF;
+$sec-text-color: #A1A4AC;
+$btn-color: #14B45C;
+
+@mixin container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1410px;
+}
+
+@mixin myBtn($size) {
+    border: 1px solid $btn-color;
+    color: white;
+    background-color: $btn-color;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: transparent;
+        color: $btn-color;
+    }
+
+    @if $size==medium {
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    @else if $size==large {
+        padding: 16px 30px;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+}
